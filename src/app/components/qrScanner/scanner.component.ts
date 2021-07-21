@@ -14,7 +14,6 @@ export class QrScanner  {
   }
 
   public scanSuccessHandler(e: any) {
-    if(!e) return ;
     const value = e || '';
     this.originalValue = value;
 
@@ -34,10 +33,9 @@ export class QrScanner  {
   }
 
   proceedCheckout () {
-     let completeList = [];
-     const oldData = localStorage.getItem('productData');
-     let x = oldData ? JSON.parse(oldData) : [];
-     const data = oldData ? JSON.stringify([...x, this.scanValue]) : '';
+     let oldData: any = localStorage.getItem('productData') || [];
+     let x: any = oldData.length ? JSON.parse(oldData) : [];
+     const data = JSON.stringify([...x, this.scanValue]);
      localStorage.setItem('productData', data);
   }
 

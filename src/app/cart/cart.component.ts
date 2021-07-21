@@ -13,7 +13,7 @@ export class Cart  {
   		const availableData = JSON.parse(localStorage.getItem('productData'))
   		if(availableData && availableData.length) {
   			this.productData = availableData
-        this.totalAmount = availableData.reduce((acc, curr) => acc = acc + curr.cost, 0)
+        this.totalAmount = availableData.reduce((acc, curr) => acc = acc + parseInt(curr.cost), 0)
   		} else {
         this.productData = []
       }
