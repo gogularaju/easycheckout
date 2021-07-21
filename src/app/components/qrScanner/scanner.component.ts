@@ -10,6 +10,7 @@ export class QrScanner  {
 
   scanValue: any;
   originalValue: any;
+  appendProducts: any;
   constructor() {
   }
 
@@ -20,24 +21,30 @@ export class QrScanner  {
     console.log('e', e, typeof e)
 
     var properties = value.split(',');
-      console.log('value', value)
-    var obj = {};
-    properties.forEach(function(property) {
-        var tup = property.split(':');
-        obj[tup[0]] = tup[1];
-    });
+    console.log('value', value)
 
-    console.log('obj', obj, typeof obj)
+    if(value && value.id) {
+      var obj = {};
+      properties.forEach(function(property) {
+          var tup = property.split(':');
+          obj[tup[0]] = tup[1];
+      });
 
-    this.scanValue = obj || {};
+      console.log('obj', obj, typeof obj)
+
+      this.scanValue = obj || {};
+      this.appendProducts.push(this.scanValue)
+    }
+    
   }
 
   proceedCheckout () {
      let oldData: any = localStorage.getItem('productData') || [];
      let x: any = oldData.length ? JSON.parse(oldData) : [];
-     const data = JSON.stringify([...x, this.scanValue]);
+     const data = JSON.stringify([...x, ...this.appendProducts]);
      localStorage.setItem('productData', data);
   }
+
 
 }
 
