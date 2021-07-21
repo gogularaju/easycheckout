@@ -28,8 +28,10 @@ export class Cart  {
       const index = this.productData.findIndex(x => x.id === item.id);
       if (index !== -1) {
           this.productData.splice(index, 1);
-           this.totalAmount =  this.totalAmount - item.cost;
+          this.totalAmount =  this.totalAmount - item.cost;
       }
+
+      localStorage.setItem('productData', JSON.stringify(this.productData))
 
     }
 
