@@ -17,6 +17,13 @@
   overflow: auto;
    height: 100vh;
 }
+.product-name{
+    color: red;
+}
+
+.original-value{
+    border: solid 1px green;
+}
 
 
 

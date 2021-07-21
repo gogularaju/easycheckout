@@ -8,36 +8,35 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 })
 export class QrScanner  {
 
+  scanValue: any;
+  originalValue: any;
   constructor() {
   }
 
-  public scanSuccessHandler($event: any) {
-    console.log('QR scanner result: ', $event)
+  public scanSuccessHandler(e: any) {
+    if(!e) return ;
+    const value = e || '';
+    this.originalValue = value;
+
+    console.log('e', e, typeof e)
+
+    var properties = value.split(',');
+      console.log('value', value)
+    var obj = {};
+    properties.forEach(function(property) {
+        var tup = property.split(':');
+        obj[tup[0]] = tup[1];
+    });
+
+    console.log('obj', obj, typeof obj)
+
+    this.scanValue = obj || {};
   }
 
-  tryDemo () {
-    const product = [{
-      id: 1,
-      code: 'BL',
-      cost: 1400,
-      currency: 'Rs',
-      manufactureDate: '12-05-2021',
-      name: 'Black Label'
-    },
-    {
-      id: 2,
-      code: 'RL',
-      cost: 1200,
-      currency: 'Rs',
-      manufactureDate: '14-05-2021',
-      name: 'Red Label'
-    }]
-
-     const data = JSON.stringify(product);
+  proceedCheckout () {
+     const data = JSON.stringify([this.scanValue]);
      localStorage.setItem('productData', data);
   }
-    
- 
 
 }
 

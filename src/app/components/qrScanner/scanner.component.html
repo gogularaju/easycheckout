@@ -1,9 +1,8 @@
 <div class="qr-scanner-container">
-
-          <div class="qr-scanner-title">
-                 <button class="demo-button" (click)="tryDemo()" routerLink="/cart">Demo Checkout</button>
-            </div>
-              <div class="qr-scanner-or qr-scanner-title">OR
+    <div class="original-value">{{originalValue}}</div>
+         <div class="qr-scanner-or qr-scanner-title"  *ngIf="scanValue && scanValue.id">Your product:&nbsp;&nbsp;<span class="product-name">{{scanValue ? scanValue.name.toUpperCase() : ''}}</span></div>
+          <div class="qr-scanner-title" *ngIf="scanValue && scanValue.id">
+                 <button class="demo-button" (click)="proceedCheckout()" routerLink="/cart">Proceed to checkout</button>
             </div>
             <div class="qr-scanner-title">
                  Scan the QR on the product
