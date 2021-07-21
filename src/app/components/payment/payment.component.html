@@ -1,0 +1,24 @@
+<div class="dashboard">
+	<div class="payment-title">Choose a Payment Method <span class="title-suffix">(click one of the option below)</span></div>
+
+	<div class="card-details demo-title">
+        <div class="first-option-title">Attention ! This is a demo flow</div>
+    </div>
+
+	<div class="card-details first">
+        <div class="payment-option " (click)="paymentMethod('first')">Pay using Credit or Debit card</div>
+    </div>
+    <div class="card-details second">
+        <div class="payment-option " (click)="paymentMethod('second')">UPI Payment</div>
+    </div>
+    <div class="card-details third">
+        <div class="payment-option " (click)="paymentMethod('third')">Net Banking</div>
+    </div>
+    <div class="card-details fourth">
+        <div class="payment-option " (click)="paymentMethod('fourth')">Pay cash at counter</div>
+    </div>
+
+       <div class="checkout-btn-panel">
+           <button class="checkout-btn" routerLink="/success">Proceed to Payment</button>
+    </div>
+</div>

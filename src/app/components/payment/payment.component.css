@@ -1,0 +1,54 @@
+.payment-title {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-suffix {
+    font-size: 10px;
+}
+
+.card-details {
+  color: black;
+  margin-top: 32px;
+  padding: 10px;
+  border: solid 1px;
+}
+  
+.card-details p {
+  font-size: 15px;
+}
+  
+.card-details label {
+  font-size: 15px;
+  line-height: 35px;
+}
+.payment-option {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.demo-title {
+    background-color: orange;
+}
+.checkout-btn {
+    background-color: rgb(0, 101, 255);
+    appearance: none;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #0071dc;
+    color: #fff;
+    width: 100%;
+}
+.checkout-btn-panel {
+    margin-top: 48px;
+    padding: 12px;
+}

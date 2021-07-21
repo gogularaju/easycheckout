@@ -1,0 +1,139 @@
+@media only screen and (min-width: 992px) {
+    .dashboard {
+        margin-left: 10%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600) {
+    .dashboard {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        padding: 20px;
+    }
+}
+
+.cart-offer-panel {
+    padding: 28px;
+}
+
+.offer-text {
+    font-weight: 600;
+}
+
+.items-panel {
+    padding: 12px;
+    border-top: solid 1px;
+}
+
+.items-number {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.cart-banner {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 32px;
+    padding: 8px;
+    background-color: #0071DC;
+    color: white;
+    animation: blinker 4s linear infinite;
+    border-radius: 4px;
+}
+
+.cart-border-banner {
+       border: solid 1px #0071DC;
+    border-left-color: white;
+    border-right-color: white;
+    padding: 5px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}
+.product-section {
+    margin-top: 24px;
+    font-family: monospace;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-label {
+    font-weight: 600;
+}
+
+.plus-button {
+    border: 2px solid;
+    background-color: #fff;
+    font-size: 16px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 999px;
+    position: relative;
+    top: -4px;
+}
+
+.plus-button::after {
+     content: "";
+        display: block;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+
+.plus-button:before {
+        height: 1em;
+        width: 0.2em;
+    }
+
+.plus-button::after {
+        height: 0.2em;
+        width: 1em;
+    }
+
+.plus-button--small {
+    font-size: 12px;
+}
+
+.cost-panel {
+    margin-top: 48px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 1px;
+    padding: 12px;
+}
+
+.checkout-btn {
+    background-color: rgb(0, 101, 255);
+    appearance: none;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #0071dc;
+    color: #fff;
+    width: 100%;
+}
+.checkout-btn-panel {
+    margin-top: 48px;
+    padding: 12px;
+}
+

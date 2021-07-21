@@ -1,0 +1,16 @@
+<div class="qr-scanner-container">
+
+          <div class="qr-scanner-title">
+                 <button class="demo-button" (click)="tryDemo()" routerLink="/cart">Demo Checkout</button>
+            </div>
+              <div class="qr-scanner-or qr-scanner-title">OR
+            </div>
+            <div class="qr-scanner-title">
+                 Scan the QR on the product
+            </div>
+            <div class="qr-scanner-body">
+                <zxing-scanner *ngIf="true" #scanner (scanSuccess)="scanSuccessHandler($event)">
+                </zxing-scanner>
+            </div>
+           
+</div>

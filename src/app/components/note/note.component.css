@@ -1,0 +1,39 @@
+.note {
+    background-color: rgb(255, 240, 70);
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 1em;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.note_toolbar {
+    background: #7f6c04;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.content {
+    padding: 5px;
+    outline: none;
+    max-height: 400px;
+    height: 380px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.note-title {
+    padding: 10px;
+    font-family: sans-serif;;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.note-footer {
+     padding: 10px;
+    font-family: sans-serif;;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}

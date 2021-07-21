@@ -1,0 +1,48 @@
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid;
+    border-color: rgb(1, 43, 114, 0.7);
+    padding: 5px;
+    height: 20px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+.wrap {
+    position: absolute;
+}
+
+@media only screen and (min-width: 992px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 500px 30px 500px;
+        background-color: black;
+        z-index: 10;
+        color: white;
+        letter-spacing: 10px;
+    font-size: 24px;
+     justify-content: center;
+         position: sticky;
+    top: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 14px;
+        background-color: black;
+        z-index: 10;
+        color: white;
+        letter-spacing: 10px;
+    font-size: 24px;
+    justify-content: center;
+        position: sticky;
+    top: 0;
+
+    }
+}
