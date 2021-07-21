@@ -34,7 +34,10 @@ export class QrScanner  {
   }
 
   proceedCheckout () {
-     const data = JSON.stringify([this.scanValue]);
+     let completeList = [];
+     const oldData = localStorage.getItem('productData');
+     let x = oldData ? JSON.parse(oldData) : [];
+     const data = oldData ? JSON.stringify([...x, this.scanValue]) : '';
      localStorage.setItem('productData', data);
   }
 
