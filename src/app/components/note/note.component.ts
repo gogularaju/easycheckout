@@ -1,4 +1,4 @@
-import {Component, HostBinding, EventEmitter, Output, ElementRef} from '@angular/core'
+import {Component} from '@angular/core'
 
 @Component({
   selector:'app-note',
@@ -6,20 +6,22 @@ import {Component, HostBinding, EventEmitter, Output, ElementRef} from '@angular
   styleUrls:['./note.component.css']
 })
 
-export class NoteComponent {
 
-  @Output() dismiss = new EventEmitter();
-  @Output() focusout = new EventEmitter();
-  constructor(private el:ElementRef) {
-  
+export class NoteComponent {
+   enteredNotes: string;
+
+  constructor() {
+    const savedNotes = localStorage.getItem('note');
+    this.enteredNotes = savedNotes || '';
   }
-  
-  onDismiss(event){
-    this.dismiss.emit(event);
-  }
-  
-  onFocusOut(event){
-    this.focusout.emit(event)
-  }
+
+ onFocusOut(event) {
+    if(event) {
+      const value = event.target.innerText;
+      this.enteredNotes = value;
+      localStorage.setItem('note', value)
+    }
+ }
+
 
 }

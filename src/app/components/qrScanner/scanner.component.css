@@ -14,14 +14,30 @@
 };
 
 .qr-scanner-container { 
-    overflow: auto;
+  overflow: auto;
    height: 100vh;
 }
 
 
-.qr-scanner-body {
-	
+
+@media only screen and (min-width: 992px) {
+    .qr-scanner-body {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    } 
 }
+
+@media only screen and (max-width: 600px) {
+    .qr-scanner-body {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    } 
+}
+
+
+
 
 .qr-scanner-or {
 }

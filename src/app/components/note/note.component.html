@@ -1,8 +1,8 @@
 <div>
 	<div class="note-title">Let's remember everything...</div>
 	<div class="note">
-	<div class="content" contenteditable="true" (blur)="onFocusOut($event)">
-		<ng-content></ng-content>
+	<div class="content" contenteditable="true" (blur)="onFocusOut($event)"
+	[textContent]="enteredNotes" (input)="enteredNotes=$event.target.textContent">
 	</div>
 </div>
 <div class="note-footer">Your notes will be auto saved</div>
