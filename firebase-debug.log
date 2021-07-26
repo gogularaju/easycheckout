@@ -1,0 +1,17 @@
+[debug] [2021-07-26T08:53:54.483Z] ----------------------------------------------------------------------
+[debug] [2021-07-26T08:53:54.486Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-07-26T08:53:54.486Z] CLI Version:   9.16.0
+[debug] [2021-07-26T08:53:54.486Z] Platform:      win32
+[debug] [2021-07-26T08:53:54.486Z] Node Version:  v12.16.1
+[debug] [2021-07-26T08:53:54.487Z] Time:          Mon Jul 26 2021 14:23:54 GMT+0530 (India Standard Time)
+[debug] [2021-07-26T08:53:54.488Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-26T08:53:54.658Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-26T08:53:54.659Z] > authorizing via signed-in user (gogularaju3@gmail.com)
+[debug] [2021-07-26T08:53:54.659Z] [iam] checking project easycheckout-320407 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-26T08:53:54.662Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/easycheckout-320407:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-07-26T08:54:15.722Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. connect ETIMEDOUT 142.250.193.106:443
+[debug] [2021-07-26T08:54:15.725Z] > refreshing access token with scopes: []
+[debug] [2021-07-26T08:54:15.725Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

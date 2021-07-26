@@ -8,7 +8,7 @@
              <div class="product-name" *ngIf="scanValue && scanValue.id">{{scanValue.name.toUpperCase()}} - {{scanValue.currency}}.{{scanValue.cost}}</div>
          </div>
           <div class="qr-scanner-title" *ngIf="scanValue && scanValue.id">
-            <button *ngIf="appendProducts && appendProducts.length > 0" class="demo-button" (click)="proceedCheckout()" routerLink="/cart">{{buttonText}}</button>
+            <button *ngIf="appendProducts && appendProducts.length > 0" class="demo-button" (click)="proceedCheckout()" routerLink="/cart">Proceed to cart ({{appendProducts.length}})</button>
             </div>
 
             <div class="qr-scanner-title">
