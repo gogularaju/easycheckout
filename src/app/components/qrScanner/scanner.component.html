@@ -1,9 +1,14 @@
 <div class="qr-scanner-container">
-    <div class="original-value" *ngIf="!!originalValue">{{originalValue}}</div>
-    <div><b>Number of products scanned:</b> {{appendProducts && appendProducts.length}}</div>
-         <div class="qr-scanner-or qr-scanner-title"  *ngIf="scanValue && scanValue.id">Your product:&nbsp;&nbsp;<span class="product-name">{{scanValue && scanValue.name ? scanValue.name.toUpperCase() : ''}}</span></div>
+    <div class="original-value" *ngIf="!!originalValue">
+        <div class="promo-title"><b>Original value of any QR:</b></div>
+        <div>{{originalValue}}</div>
+    </div>
+         <div class="scanned-value"  *ngIf="scanValue && scanValue.id">
+             <div class="qr-scanner-or qr-scanner-title">Your scanned product:</div>
+             <div class="product-name" *ngIf="scanValue && scanValue.id">{{scanValue.name.toUpperCase()}} - {{scanValue.currency}}.{{scanValue.cost}}</div>
+         </div>
           <div class="qr-scanner-title" *ngIf="scanValue && scanValue.id">
-                 <button class="demo-button" (click)="proceedCheckout()" routerLink="/cart">Proceed to cart</button>
+            <button *ngIf="appendProducts && appendProducts.length > 0" class="demo-button" (click)="proceedCheckout()" routerLink="/cart">{{buttonText}}</button>
             </div>
 
             <div class="qr-scanner-title">

@@ -81,39 +81,31 @@
   font-weight: 600;
 }
 
-.plus-button {
-  border: 2px solid;
-  background-color: #fff;
-  font-size: 16px;
-  height: 2.5em;
-  width: 2.5em;
-  border-radius: 999px;
-  position: relative;
-  top: -4px;
+.minus-button {
+    border: 2px solid red;
+    background-color: #fff;
+    font-size: 16px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 999px;
+    position: relative;
+    top: -4px;
 }
 
-.plus-button::after {
-  content: "";
-  display: block;
-  background-color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.minus-button::after {
+     content: "";
+        display: block;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0.2em;
+        width: 1em;
 }
 
-.plus-button:before {
-  height: 1em;
-  width: 0.2em;
-}
-
-.plus-button::after {
-  height: 0.2em;
-  width: 1em;
-}
-
-.plus-button--small {
-  font-size: 12px;
+.minus-button--small {
+    font-size: 12px;
 }
 
 .cost-panel {
@@ -144,4 +136,44 @@
 .checkout-btn-panel {
   margin-top: 48px;
   padding: 12px;
+}
+
+
+.addMarginRight{
+    margin-right: 8px;
+}
+
+
+.plus-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 999px;
+    padding: 12px;
+    top: -4px;
+    border: solid 2px darkgreen;
+}
+
+.plus-button:before,
+.plus-button:after {
+    content: "";
+    position: absolute;
+    background-color: darkgreen;
+}
+
+.plus-button:before {
+    left: 50%;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    transform: translateX(-50%);
+}
+
+.plus-button:after {
+    top: 50%;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    transform: translateY(-50%);
 }

@@ -1,47 +1,29 @@
 <div class="dashboard">
-  <div class="cart-border-banner">
-    <div class="cart-banner">
-      Get your membership today for unlimited offers !
+	<div class="cart-border-banner">
+	<div class="cart-banner">
+		Get your membership today for unlimited offers !
+	</div>
+	</div>
+	<div class="cart-offer-panel">Earn <span class="offer-text">5% back</span> with rewards card.</div>
+    <div class="items-panel">
+    <span class="items-number">Your cart: {{productData && productData.length ? productData.length : 0}} {{productData && productData.length === 1 ? 'item' : 'items'}}</span>
+    <div class="product-section" *ngFor="let product of productData; index as i">
+    	<div class="product-label">{{product.name}}</div>
+        <div><b>{{product.quantity}}</b>-Qty</div>
+    	<div>{{product.currency}}.{{product.totalItemCost}}</div>
+    	<div>
+            <button class="minus-button minus-button--small addMarginRight" (click)="removeItem(product, i)"></button>
+            <button class="plus-button" (click)="addItem(product)"></button>
+        </div>
     </div>
-  </div>
-  <div class="cart-offer-panel">
-    <div class="align">
-      <span
-        ><img
-          width="60px"
-          height="60px"
-          src="../../../assets/cardImg.jpeg"
-          alt="card logo"
-      /></span>
-      <p class="align-1">
-        Earn <span class="offer-text"> 5% back</span> with rewards card.
-      </p>
+
     </div>
-  </div>
-  <div class="items-panel">
-    <span class="items-number"
-      >Your cart:
-      {{ productData && productData.length ? productData.length : 0 }}
-      {{ productData && productData.length === 1 ? "item" : "items" }}</span
-    >
-    <div class="product-section" *ngFor="let product of productData">
-      <div class="product-label">{{ product.name }} - {{ product.code }}</div>
-      <div>{{ product.currency }}.{{ product.cost }}</div>
-      <div>
-        <button
-          class="plus-button plus-button--small"
-          (click)="removeItem(product)"
-        ></button>
-      </div>
+       <div class="cost-panel">
+        <div class="">Total:</div>
+        <div>Rs.{{totalAmount}}</div>
     </div>
-  </div>
-  <div class="cost-panel">
-    <div class="">Total:</div>
-    <div>Rs.{{ totalAmount }}</div>
-  </div>
-  <div class="checkout-btn-panel">
-    <button class="checkout-btn" (click)="checkout()" routerLink="/payment">
-      Checkout
-    </button>
-  </div>
+    <div class="checkout-btn-panel">
+           <button class="checkout-btn" (click)="checkout()" routerLink="/payment">Checkout</button>
+    </div>
+ 
 </div>

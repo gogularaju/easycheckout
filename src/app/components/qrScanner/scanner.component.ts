@@ -11,6 +11,8 @@ export class QrScanner  {
   scanValue: any;
   originalValue: any;
   appendProducts: any = [];
+  buttonText: string = 'Proceed to cart';
+
   constructor() {
   }
 
@@ -44,6 +46,9 @@ export class QrScanner  {
       } else {
        this.appendProducts.push(this.scanValue)
       }
+      const len = this.appendProducts.length;
+
+      this.buttonText = len ? this.buttonText + ' (' + len + ')' : this.buttonText
     }
 
   }

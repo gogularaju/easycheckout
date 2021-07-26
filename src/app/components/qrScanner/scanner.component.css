@@ -22,7 +22,7 @@
 }
 
 .original-value{
-    border: solid 1px green;
+    border: solid 1px lightgrey;
     background-color: lightgrey;
 }
 
@@ -44,10 +44,23 @@
     } 
 }
 
-
+.scanned-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 .qr-scanner-or {
+}
+
+.promo-title {
+    margin-bottom: 4px;
+}
+
+.product-name {
+        color: darkgreen;
+    font-weight: 600;
 }
 
 .demo-button {
